@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Add Marks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<link rel="stylesheet" href="/static/home.css">
+<div class="navbar navbar-expand-lg bg-light">
+    <div class="logo">
+        <h1>My Results</h1>
+    </div>
+    <div class="nav__links" z-index="1">
+        <a href="/home" class="active nav__link">Home</a>
+        <a href="/viewmarks" class="nav__link">View Marks</a>
+    </div>
+</div>
+<div id="Add Marks" class="section">
+        <!-- <form  method="POST" >
+            {% csrf_token %}
+            <input type="number" class= "form-control" placeholder="sem" name="sem">
+            <input type="text" class="form-control" placeholder="Subject code" name="subcode">
+            <input type="text" class="form-control" placeholder="Subject" name="sub">
+            <input type="number" class="form-control" placeholder="Marks" name="marks">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form> -->
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="col">
+                    <input type="number" class="form-control" placeholder="Sem" name="sem">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Subject code" name="subcode">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Subject" name="sub">
+                </div>
+                <div class="col">
+                    <input type="number" class="form-control" placeholder="Marks" name="marks">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <input type="number" class="form-control" placeholder="Sem" name="sem">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Subject code" name="subcode">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Subject" name="sub">
+                </div>
+                <div class="col">
+                    <input type="number" class="form-control" placeholder="Marks" name="marks">
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+          </form>
+</div>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="/static/login.css">
+
+</head>
+
+<!-- http://localhost:8000/static/new.css -->
+
+
+<body>
+  <div class="inFormBackground">ss
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="inLoginForm">
+      <form action="login" method="post">
+        {% csrf_token %}
+        <div class="title">
+          <h3>Login Here</h3>
+        </div>
+        <div class="inputGroup">
+          <label for="username">Username</label>
+          <input type="text" placeholder="Enter Username" id="username" name="username">
+        </div>
+        <div class="inputGroup">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Enter Password" id="password" name="password">
+        </div><br>
+        <button class="submitForm" type="submit">Login</button>
+        <button class="submitForm"><a href="/signup">Sign up</a></button>
+      </form>
+    </div>
+  </div>
+</body>
+{%if messages%}
+    <div class="fixed-top" style="z-index:1">
+      {%for message in messages%}
+        <div class="alert alert-warning fade show m-2" id="msg" role="alert">
+          {{message}} <a href="/website/login" class="alert-link">Try again!</a>
+        </div>
+      {%endfor%}
+    </div>
+  {%endif%}
+
+</html>

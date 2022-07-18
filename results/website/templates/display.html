@@ -1,0 +1,21 @@
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<table class="table table-bordered">
+    <tr>
+        <th>Sem</th>
+        <th>Subcode</th>
+        <th>Sub</th>
+        <th>Marks</th>
+    </tr>  
+</table>
+<table>
+    {% for mark in mc %}
+    <tr>
+        <td>{{mark.sem}}<td>
+        <td>{{mark.subcode}}</td>
+        <td>{{mark.subcode}}</td>
+        <td>{{mark.sub}}</td>
+        <td>{{mark.marks}}</td>
+        <br>
+    </tr>
+</table>
+{% endfor %}

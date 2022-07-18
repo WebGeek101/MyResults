@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Marks Card</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+            function view_marks(url) {
+                window.open(url);
+            }
+        </script>
+</head>
+<link rel="stylesheet" href="/static/home.css">
+<div class="navbar navbar-expand-lg bg-light">
+    <div class="logo">
+        <h1>My Results</h1>
+    </div>
+    <div class="nav__links" z-index="1">
+        <a href="/home" class="active nav__link">Home</a>
+        <a href="/insertmarks" class="nav__link">Add Marks</a>
+    </div>
+</div>
+<div id="View Marks" class="section pt-5">
+        <ul>
+            <button class="btn btn-outline-primary" onclick="view_marks('viewmarks/display')" name="one">
+                <li>1st sem</li>
+            </button>
+            <button class="btn btn-outline-primary" name="two">
+                <li>2nd sem</li>
+            </button>
+            <button class="btn btn-outline-primary" name="three">
+                <li>3rd sem</li>
+            </button>
+            <button class="btn btn-outline-primary" name="four">
+                <li>4th sem</li>
+            </button>
+            <button class="btn btn-outline-primary" name="five">
+                <li>5th sem</li>
+            </button>
+            <button class="btn btn-outline-primary" name="six">
+                <li>6th sem</li>
+            </button>
+            <button class="btn btn-outline-primary" name="7">
+                <li>7th sem</li>
+            </button>
+            <button class="btn btn-outline-primary" name="8">
+                <li>8th sem</li>
+            </button>
+        </ul>
+    </form>
+</div>
+</html>
