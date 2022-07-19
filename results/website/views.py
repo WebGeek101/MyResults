@@ -67,6 +67,6 @@ def viewmarks(request):
     return render(request, 'viewmarks.html')   
 
 def display(request):
-	mc=markscard.objects.all().filter(sem=7) # Collect all records from table 
+	mc=markscard.objects.all().filter(sem=1) # Collect all records from table 
 	return render(request,'display.html',{'mc':mc})            
     
